@@ -206,6 +206,7 @@ a {
     width: 100%;
     max-width: 450px;
     max-height: 90vh;
+    object-fit: contain;
 
     animation: pop .5s forwards;
 }
