@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Light Box</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<div class="content left">
+			<h1>2023 Gallery Recap</h1>
+			<p>Foto-foto koleksi tiarawr ✌️</p>
+		</div>
+
+		<div class="content right">
+			<h1>MET 2023</h1>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque aliquam natus voluptatum ullam hic minima sequi consequatur autem, temporibus pariatur ut illo quisquam magni qui! Reiciendis autem quia totam facere, ipsum voluptate doloremque aliquam error ea, rerum illum! Est dolorum ipsam blanditiis maiores impedit pariatur commodi, esse odio dignissimos sed consequatur expedita architecto quod quaerat at veritatis molestias numquam non quo dicta fuga temporibus enim! Fuga ea ut provident ad a itaque consequuntur libero dicta? Ipsam quis, doloribus asperiores, iste possimus ratione quo culpa dolores sed soluta odit! Quas officiis iste nulla fuga molestias iure illum nisi distinctio accusamus vero!</p>
+		</div>
+
+		<h3 class="tips"><i class="fa-solid fa-arrow-right me-3"></i>DRAG TO MOVE</h3>
+
+		<div id="cursor"></div>
+		<div id="container">
+			<a href="#img1" class="image" style="--i: 1"
+				><img src="images/img1.jpg" alt="" draggable="false" /></a
+			><a href="#img2" class="image" style="--i: 2"
+				><img src="images/img2.jpg" alt="" draggable="false" /></a
+			><a href="#img3" class="image" style="--i: 3"
+				><img src="images/img3.jpg" alt="" draggable="false" /></a
+			><a href="#img4" class="image" style="--i: 4"
+				><img src="images/img4.jpg" alt="" draggable="false" /></a
+			><a href="#img5" class="image" style="--i: 5"
+				><img src="images/img5.jpg" alt="" draggable="false" /></a
+			><a href="#img6" class="image" style="--i: 6"
+				><img src="images/img6.jpg" alt="" draggable="false" /></a
+			><a href="#img7" class="image" style="--i: 7"
+				><img src="images/img7.jpg" alt="" draggable="false" /></a
+			>
+			
+			<a href="#img8" class="image" style="--i: 8"
+				><img src="images/img8.jpg" alt="" draggable="false" /></a
+			><a href="#img9" class="image" style="--i: 9"
+				><img src="images/img9.jpg" alt="" draggable="false" /></a
+			><a href="#img10" class="image" style="--i: 10"
+				><img src="images/img10.jpg" alt="" draggable="false" /></a
+			><a href="#img11" class="image" style="--i: 11"
+				><img src="images/img11.jpg" alt="" draggable="false" /></a
+			><a href="#img12" class="image" style="--i: 12"
+				><img src="images/img12.jpg" alt="" draggable="false" /></a
+			><a href="#img13" class="image" style="--i: 13"
+				><img src="images/img13.jpg" alt="" draggable="false" /></a
+			><a href="#img14" class="image" style="--i: 14"
+				><img src="images/img14.jpg" alt="" draggable="false" /></a
+			><a href="#img15" class="image" style="--i: 15"
+				><img src="images/img15.jpg" alt="" draggable="false" /></a
+			><a href="#img16" class="image" style="--i: 16"
+				><img src="images/img16.jpg" alt="" draggable="false" /></a
+			><a href="#img17" class="image" style="--i: 17"
+				><img src="images/img17.jpg" alt="" draggable="false" /></a
+			><a href="#img18" class="image" style="--i: 18"
+				><img src="images/img18.jpg" alt="" draggable="false" /></a
+			><a href="#img19" class="image" style="--i: 19"
+				><img src="images/img19.jpg" alt="" draggable="false"
+			/></a>
+			<a href="#img20" class="image" style="--i: 20"
+				><img src="images/img20.jpg" alt="" draggable="false"
+			/></a>
+			<a href="#img21" class="image" style="--i: 21"
+				><img src="images/img21.jpg" alt="" draggable="false"
+			/></a>
+			<a href="#img22" class="image" style="--i: 22"
+				><img src="images/img22.jpg" alt="" draggable="false"
+			/></a>
+			<a href="#img23" class="image" style="--i: 23"
+				><img src="images/img23.jpg" alt="" draggable="false"
+			/></a>
+			<a href="#img24" class="image" style="--i: 24"
+				><img src="images/img24.jpg" alt="" draggable="false"
+			/></a>
+			<a href="#img25" class="image" style="--i: 25"
+				><img src="images/img25.jpg" alt="" draggable="false"
+			/></a>
+		</div>
+
+		<div class="box" id="img1">
+			<a href="#" class="close">close</a><a href="#img7" class="prev"><</a
+			><img src="images/img1.jpg" alt="" /><a href="#img2" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img2">
+			<a href="#" class="close">close</a><a href="#img1" class="prev"><</a
+			><img src="images/img2.jpg" alt="" /><a href="#img3" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img3">
+			<a href="#" class="close">close</a><a href="#img2" class="prev"><</a
+			><img src="images/img3.jpg" alt="" /><a href="#img4" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img4">
+			<a href="#" class="close">close</a><a href="#img3" class="prev"><</a
+			><img src="images/img4.jpg" alt="" /><a href="#img5" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img5">
+			<a href="#" class="close">close</a><a href="#img4" class="prev"><</a
+			><img src="images/img5.jpg" alt="" /><a href="#img6" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img6">
+			<a href="#" class="close">close</a><a href="#img5" class="prev"><</a
+			><img src="images/img6.jpg" alt="" /><a href="#img7" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img7">
+			<a href="#" class="close">close</a><a href="#img6" class="prev"><</a
+			><img src="images/img7.jpg" alt="" /><a href="#img8" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img8">
+			<a href="#" class="close">close</a><a href="#img19" class="prev"><</a
+			><img src="images/img8.jpg" alt="" /><a href="#img9" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img9">
+			<a href="#" class="close">close</a><a href="#img8" class="prev"><</a
+			><img src="images/img9.jpg" alt="" /><a href="#img10" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img10">
+			<a href="#" class="close">close</a><a href="#img9" class="prev"><</a
+			><img src="images/img10.jpg" alt="" /><a href="#img11" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img11">
+			<a href="#" class="close">close</a><a href="#img10" class="prev"><</a
+			><img src="images/img11.jpg" alt="" /><a href="#img12" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img12">
+			<a href="#" class="close">close</a><a href="#img11" class="prev"><</a
+			><img src="images/img12.jpg" alt="" /><a href="#img13" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img13">
+			<a href="#" class="close">close</a><a href="#img12" class="prev"><</a
+			><img src="images/img13.jpg" alt="" /><a href="#img14" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img14">
+			<a href="#" class="close">close</a><a href="#img13" class="prev"><</a
+			><img src="images/img14.jpg" alt="" /><a href="#img15" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img15">
+			<a href="#" class="close">close</a><a href="#img14" class="prev"><</a
+			><img src="images/img15.jpg" alt="" /><a href="#img16" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img16">
+			<a href="#" class="close">close</a><a href="#img15" class="prev"><</a
+			><img src="images/img16.jpg" alt="" /><a href="#img17" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img17">
+			<a href="#" class="close">close</a><a href="#img16" class="prev"><</a
+			><img src="images/img17.jpg" alt="" /><a href="#img18" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img18">
+			<a href="#" class="close">close</a><a href="#img17" class="prev"><</a
+			><img src="images/img18.jpg" alt="" /><a href="#img19" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img19">
+			<a href="#" class="close">close</a><a href="#img18" class="prev"><</a
+			><img src="images/img19.jpg" alt="" /><a href="#img20" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img20">
+			<a href="#" class="close">close</a><a href="#img19" class="prev"><</a
+			><img src="images/img20.jpg" alt="" /><a href="#img21" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img21">
+			<a href="#" class="close">close</a><a href="#img20" class="prev"><</a
+			><img src="images/img21.jpg" alt="" /><a href="#img22" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img22">
+			<a href="#" class="close">close</a><a href="#img21" class="prev"><</a
+			><img src="images/img22.jpg" alt="" /><a href="#img23" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img23">
+			<a href="#" class="close">close</a><a href="#img22" class="prev"><</a
+			><img src="images/img23.jpg" alt="" /><a href="#img24" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img24">
+			<a href="#" class="close">close</a><a href="#img23" class="prev"><</a
+			><img src="images/img24.jpg" alt="" /><a href="#img25" class="next"
+				>></a
+			>
+		</div>
+		<div class="box" id="img25">
+			<a href="#" class="close">close</a><a href="#img24" class="prev"><</a
+			><img src="images/img25.jpg" alt="" /><a href="#img1" class="next"
+				>></a
+			>
+		</div>
+	</body>
+</html>
