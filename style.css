@@ -158,6 +158,8 @@ img {
     height: 100%;
     object-fit: cover;
     user-select: none !important;
+    pointer-events: none !important;
+    -webkit-user-drag: none !important;
 }
 
 a {
@@ -202,7 +204,7 @@ a {
 
 .box img {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     max-height: 90vh;
 
     animation: pop .5s forwards;
@@ -213,7 +215,7 @@ a {
     position: absolute;
     color: rgba(255,255,255,.2);
     font-weight: bold;
-    font-size: 6rem;
+    font-size: 5rem;
     text-transform: uppercase;
     border-radius: 5px;
     top: 1rem;
