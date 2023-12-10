@@ -1,38 +1,8 @@
-@font-face {
-    font-family: "Roboto";
-    font-weight: 300;
-    src: url('font/Roboto-Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-weight: 700;
-    src: url('font/Roboto-Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-weight: 400;
-    src: url('font/Roboto-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-weight: 500;
-    src: url('font/Roboto-Medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-weight: 900;
-    src: url('font/Roboto-Black.ttf') format('truetype');
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Roboto', system-ui, sans-serif;
 }
 
 body {
@@ -40,32 +10,53 @@ body {
     background: black;
 }
 
-#container {
-    width: auto;
+img {
+    width: 100%;
     height: 100%;
-    max-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    translate: 0%;
-    display: flex;
+    object-fit: cover;
+    user-select: none !important;
+    pointer-events: none !important;
+    -webkit-user-drag: none !important;
+}
+
+a {
+    -webkit-user-drag: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.music {
+    position: fixed;
+    font-size: 1.4rem;
+    color: white;
+    top: 1rem;
+    left: 2rem;
+    z-index: 1000;
 }
 
 #cursor {
     width: 100px;
     height: 100px;
-    filter: blur(80px);
     background: red;
+    filter: blur(60px);
     border-radius: 50%;
     position: fixed;
     translate: -50% -50%;
-    z-index: 1000;
     pointer-events: none;
     user-select: none;
+    z-index: 1000;
+}
+
+#container {
+    height: 100%;
+    max-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
 }
 
 .content {
-    text-transform: uppercase;
     margin: 2rem auto;
     color: white;
     font-weight: 900;
@@ -88,23 +79,42 @@ body {
 
 .content h1 {
     font-size: 3.5rem;
+    font-family: "Lilita One"
+}
+
+.content p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #eee;
 }
 
 .tips {
     user-select: none;
-    position: fixed;
+    position: absolute;
     bottom: 2rem;
     left: 2rem;
     color: white;
-    animation: animate 1s infinite alternate;
     font-weight: 500;
+}
+.tips-right {
+    animation: animate-right 1s infinite alternate;
+    display: block !important;
+}
+
+.tips-down {
+    animation: animate-down 1s infinite alternate;
+    display: none !important;
 }
 
 .me-3 {
     margin-right: 1rem;
 }
 
-@keyframes animate {
+.none {
+    display: none !important;
+}
+
+@keyframes animate-right {
     0%{
         translate: 0;
     }
@@ -113,10 +123,13 @@ body {
     }
 }
 
-.content p {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #eee;
+@keyframes animate-down {
+    0%{
+        translate: 0;
+    }
+    100%{
+        translate: 0 10px;
+    }
 }
 
 .image {
@@ -129,7 +142,10 @@ body {
 .image::after{
     content: '';
     position: absolute;
-    inset: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background: rgba(0,0,0,.7);
     transition: .3s;
 }
@@ -141,31 +157,13 @@ body {
 .image img {
     transition: .3s, filter .5s;
     filter: grayscale(1);
-    user-select: none;
-    -webkit-user-drag: none;
     object-position: 0%;
-    pointer-events: none;
 }
 
 .image:hover img{
     scale: 1.2;
     rotate: 2deg;
     filter: grayscale(0) saturate(1.5);
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    user-select: none !important;
-    pointer-events: none !important;
-    -webkit-user-drag: none !important;
-}
-
-a {
-    -webkit-user-drag: none;
-    text-decoration: none;
-    color: inherit;
 }
 
 .box {
@@ -222,7 +220,7 @@ a {
     top: 1rem;
     letter-spacing: .1em;
     right: 1rem;
-    translate: 0 -110%;
+    transform: translateY(-110%);
     z-index: 10;
     animation: slideDown .5s .8s forwards;
 }
@@ -249,6 +247,36 @@ a {
     color: rgba(255,255,255,1);
 } 
 
+footer {
+    width: 100%;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: .9rem;
+    position: fixed;
+    top: 2rem;
+    z-index: -1;
+    right: 2rem;
+    background: black;
+    width: max-content;
+}
+
+.bubble {
+    user-select: none;
+    pointer-events: none;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 110vh;
+    animation: float 10s infinite;
+    opacity: .2;
+    z-index: -100;
+}
+
+@keyframes float {
+    100%{
+        top: -20vh;
+    }
+}
 
 @keyframes pop {
     0%{
@@ -273,6 +301,6 @@ a {
 @keyframes slideDown {
     100% {
         opacity: 1;
-        translate: 0%;
+        transform: translateY(0%);
     }
 }

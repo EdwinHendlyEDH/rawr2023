@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    src: url('font/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url('font/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url('font/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    src: url('font/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 900;
+    src: url('font/Roboto-Black.ttf') format('truetype');
+}
