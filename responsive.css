@@ -85,7 +85,7 @@
 		right: initial;
 		margin: auto;
 		color: rgba(255, 255, 255, 1);
-        font-size: 2rem;
+        font-size: 3rem;
 	}
 
 	.box .close::after {
